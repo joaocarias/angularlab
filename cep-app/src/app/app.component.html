@@ -1,0 +1,11 @@
+<input type="text" #cepInput placeholder="Digite aqui seu CEP.">
+
+<button (click)="search(cepInput.value)">Buscar</button>
+
+<div *ngIf="address">
+  <p>CEP: {{ address.cep }}</p>
+  <p>Estado: {{ address.state }}</p>
+  <p>Cidade: {{ address.city }}</p>
+  <p>Rua: {{ address.street }}</p>
+  <p>Bairro: {{ address.neighborhood }}</p>
+</div>
